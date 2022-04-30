@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite';
 import path from "path";
 import solidPlugin from 'vite-plugin-solid';
-import WindiCSS from 'vite-plugin-windicss';
 import dts from "vite-plugin-dts";
 import pkg from "./package.json";
 
 export default defineConfig({
     plugins: [
         solidPlugin(),
-        WindiCSS(),
         dts({
             tsConfigFilePath: "tsconfig.build.json",
             insertTypesEntry: true,
